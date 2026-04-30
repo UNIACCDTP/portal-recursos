@@ -1,251 +1,74 @@
-<div style="width: 100%; font-family: Arial, sans-serif; box-sizing: border-box;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formatos, tutoriales y recursos</title>
 
-    <h2 style="font-size: 1.5rem; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; border: 1px solid #7AB2D4; background: #B5D9EB; margin: 0 0 1rem 0;">
-        <span style="font-size: 1.5rem;">Formatos, tutoriales y recursos</span>
-    </h2>
+<style>
+    body { margin: 0; padding: 24px; font-family: Arial, sans-serif; color: #305F7B; background: #ffffff; box-sizing: border-box; }
+    * { box-sizing: border-box; }
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
+    .title-box { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; border: 1px solid #7AB2D4; background: #B5D9EB; color: #305F7B; font-family: 'Montserrat', Arial, sans-serif; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0; }
+    .intro { font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; }
+    .grid-botones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 20px 0; }
+    .boton-cuadrado { aspect-ratio: 1 / 1; width: 100%; min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; border-radius: 14px; background: #4D98C5; color: #ffffff !important; font-family: 'Montserrat', Arial, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.25; text-align: center; text-decoration: none; border: 1px solid #3B82AA; box-shadow: 0 4px 10px rgba(48, 95, 123, 0.18); transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
+    .boton-cuadrado:hover, .boton-cuadrado:focus { background: #305F7B; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(48, 95, 123, 0.25); outline: none; }
+    .icono { display: block; font-size: 2.4rem; line-height: 1; }
+    .placeholder { visibility: hidden; pointer-events: none; }
+    @media (max-width: 900px) { .grid-botones { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 640px) { .grid-botones { grid-template-columns: repeat(2, minmax(0, 1fr)); } body { padding: 16px; } }
+</style>
 
-    <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B;">
-        Selecciona un ítem para acceder:
-    </p>
-
-    <div style="width: 100%; max-width: 100%; margin: 20px 0; font-family: Arial, sans-serif; box-sizing: border-box;">
-
-        <!-- Ítem 1 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                1. Utiliza estos formatos para entregar tu respuesta a las evaluaciones
-            </summary>
-
-            <div style="width: 100%; box-sizing: border-box; margin-top: 10px;">
-                <h2 style="font-size: 1.5rem; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; border: 1px solid #7AB2D4; background: #B5D9EB; margin: 0 0 1rem 0;">
-                    <span style="font-size: 1.5rem;">Formatos</span>
-                </h2>
-
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B;">
-                    Accede a los siguientes enlaces. Puedes:
-                </p>
-
-                <ul style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; padding-left: 20px;">
-                    <li>
-                        Hacer una copia hacia tu cuenta @uniacc.edu:
-                        <ul style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; padding-left: 20px; margin-top: 0.5rem;">
-                            <li>Quedará alojado en tu Google Drive y podrás trabajar sobre este archivo de forma online.</li>
-                            <li>Podrás entregarlo desde el mismo Google Drive o descargarlo, en formato PDF, para subirlo a la evaluación correspondiente.</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <ul style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; padding-left: 20px;">
-                    <li>Escoger el formato que más te guste.</li>
-                </ul>
-
-                <p style="font-size: 1.33rem; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #4D98C5; margin-top: 1.5rem;">
-                    Formato escrito vertical
-                </p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/document/d/1PrN3ScaTwC_1zqYI_Dj3rd0GrYDq7LpjD-rWoKTzr9Q/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 1</a></p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/document/d/1Vb-1XMqPxbEmHdKyQAPaTDY5I0Gu5KHzX2JsOzsHnzw/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 2</a></p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/document/d/18yt5Dit2C5Ny92opYVJaJYDGKNV0N9qK23HA0BJVj_o/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 3</a></p>
-
-                <p style="font-size: 1.33rem; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #4D98C5; margin-top: 1.5rem;">
-                    Formato presentación
-                </p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/presentation/d/1rhYfWVmNXQe4Z2kv27mE9TF9c5zD4U5J58bb79yTnBs/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 1</a></p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/presentation/d/1_3PsiSosz5odNTRaHWtoMHT6M_y2TyTZSW7Q9jj5RmM/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 2</a></p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/presentation/d/1svfcbNQU_5Y-0h3XiTYl5RHQEYsrINhUBpa6G7uE7ks/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 3</a></p>
-
-                <p style="font-size: 1.33rem; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #4D98C5; margin-top: 1.5rem;">
-                    Formato escrito horizontal
-                </p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/document/d/1yUDe7NuXu0wZpn4KaAdAJs7jo7xuBuIezGE9XHw3v6M/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 1</a></p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/document/d/1cIm3rRt0AKv-m8nKO_G-iOpHYDqKY-HbbIOwsH4FFbk/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 2</a></p>
-                <p style="font-size: 1.33rem; font-family: 'Montserrat', Arial, sans-serif;"><a href="https://docs.google.com/document/d/1lG__cZGN9yoEb2DB6YLymVww5wc7OA5s8ZguGBc9ezs/edit?usp=sharing" target="_blank" style="color: rgb(77, 152, 197); font-weight: 700;">Opción 3</a></p>
-            </div>
-        </details>
-
-        <!-- Ítem 2 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                2. ¿Cómo participar en los foros, de forma académica?
-            </summary>
-            <div style="width: 100%; margin-top: 10px;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                    <iframe title="UNIACC │ Laboratorio de estrategias de participación en foros" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/699c9173749d48a23926da37" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-                </div>
-            </div>
-        </details>
-
-         <!-- Ítem 3 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                3. ¿Cómo analizar un caso?
-            </summary>
-            <div style="width: 100%; margin-top: 10px;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                    <iframe src="https://davdauniacc.github.io/analisiscasos/" width="100%" height="600" style="border: none;"></iframe>
-                </div>
-            </div>
-        </details>
-        
-        <!-- Ítem 4 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                4. ¿Cómo escribo un ensayo argumentativo?
-            </summary>
-            <iframe src="https://app.lumi.education/api/v1/run/qHY3aS/embed" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" style="width: 100%; height: 4760px; margin-top: 10px; border: none;"></iframe>
-            <script src="https://app.Lumi.education/api/v1/h5p/core/js/h5p-resizer.js" charset="UTF-8"></script>
-        </details>
-
-        <!-- Ítem 5 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                5. ¿Cómo citar en normas APA?
-            </summary>
-            <div style="margin-top: 10px;">
-                <iframe src="https://biblioteca.uniacc.cl/normas-apa/?_gl=1*ua3f01*_gcl_au*MzA1NjE4MC4xNzc0MjgyNjUw" width="100%" height="600" style="border: none;"></iframe>
-            </div>
-        </details>
-
-        <!-- Ítem 6 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                6. ¿Cómo trabajar colaborativamente en Google Workspace de mi cuenta @uniacc.edu?
-            </summary>
-
-            <div style="margin-top: 10px;">
-                <h2 style="font-size: 1.5rem; font-weight: 700; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 8px; border-radius: 8px; border: 1px solid #7AB2D4; background: #B5D9EB; margin: 0 0 1rem 0;">
-                    <span style="font-size: 1.5rem;">Trabajo colaborativo en Google Workspace</span>
-                </h2>
-
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B;">
-                    Para trabajar colaborativamente en documento final y archivos asociados dentro del espacio seguro de Google Workspace asociado a tu cuenta @uniacc.edu, recuerda que debes:
-                </p>
-
-                <ul style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; padding-left: 20px;">
-                    <li>Leer las indicaciones para el trabajo colaborativo.</li>
-                    <li>Ver todos los videotutoriales que se encuentran en el Portal de ayuda al estudiante.</li>
-                    <li>Seguir estos pasos:</li>
-                </ul>
-
-                <!-- Video 1 -->
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; margin-top: 1.5rem;">
-                    1. <strong style="color: #4D98C5;">¡Adiós Whatsapp! - Google Chat</strong>
-                </p>
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/mCg_urlyXKc"
-                        title="¡Adiós Whatsapp! - Google Chat"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Video 2 -->
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; margin-top: 1.5rem;">
-                    2. <strong style="color: #4D98C5;">¡No crees carpetas! - Google Drive</strong>
-                </p>
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/64c-GjX8Wow"
-                        title="¡No crees carpetas! - Google Drive"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Video 3 -->
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; margin-top: 1.5rem;">
-                    3. <strong style="color: #4D98C5;">El fin del monstruo de Frankenstein - Google Docs</strong>
-                </p>
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/BO3QDRzLf5c"
-                        title="El fin del monstruo de Frankenstein - Google Docs"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Video 4 -->
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; margin-top: 1.5rem;">
-                    4. <strong style="color: #4D98C5;">¿Horarios imposibles? - Google Meet y Google Vids</strong>
-                </p>
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/_7kdD3OuYu4"
-                        title="¿Horarios imposibles? - Google Meet y Google Vids"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Video 5 -->
-                <p style="font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; margin-top: 1.5rem;">
-                    5. <strong style="color: #4D98C5;">La entrega - Google Docs - Aula e-campus</strong>
-                </p>
-                <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
-                    <iframe
-                        src="https://www.youtube-nocookie.com/embed/p1l-5wZeQ_g"
-                        title="La entrega - Google Docs - Aula e-campus"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <p style="font-size: 1rem;">Cualquier ayuda adicional, solicítala a tu docente.</p>
-            </div>
-        </details>
-
-        <!-- Ítem 7 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                7. Organiza tu equipo de trabajo con Google Tasks
-            </summary>
-            <div style="width: 100%; margin-top: 10px;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                    <iframe title="GOOGLETASKS_INFOGRAFÍA" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/69b2dfd1508d939cda209e99" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-                </div>
-            </div>
-        </details>
-
- <!-- Ítem 8 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                8. Protocolo de género y convivencia: nuestro compromiso contigo
-            </summary>
-            <div style="width: 100%; margin-top: 10px;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wYV_5DNJGfY?si=EsdPjIxQ_SOHWkvM?vq=hd108" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </details>
-
-
-        <!-- Ítem 9 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                9. Comunicar sin sesgos, crear inclusión
-            </summary>
-            <div style="width: 100%; margin-top: 10px;">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                    <iframe title="UNIACC │ Comunicar sin sesgos, crear inclusión" frameborder="0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/69a19699a8dd2f113b5a8d64" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe>
-                </div>
-            </div>
-        </details>
-
-        <!-- Ítem 10 -->
-        <details style="width: 100%; box-sizing: border-box; margin-bottom: 8px; border: 1px solid #d9d9d9; border-radius: 6px; padding: 16px; background-color: #f5f7fa;">
-            <summary style="cursor: pointer; font-weight: bold;">
-                10. Portal de ayuda a estudiantes
-            </summary>
-            <div style="margin-top: 10px;">
-                <iframe src="https://ayudaestudiantes.uniacc.cl/" width="100%" height="600" style="border: none;"></iframe>
-            </div>
-        </details>
-
+</head>
+<body>
+<div class="wrap">
+    <h1 class="title-box">Formatos, tutoriales y recursos</h1>
+    <p class="intro">Selecciona un recurso para acceder:</p>
+    <div class="grid-botones">
+        <a class="boton-cuadrado" href="formatos.html" target="_self" aria-label="Abrir Utiliza estos formatos para entregar tu respuesta a las evaluaciones">
+            <span class="icono">📄</span>
+            <span style="font-size:1.2rem">Formatos de evaluación</span>
+        </a>
+        <a class="boton-cuadrado" href="foros.html" target="_self" aria-label="Abrir ¿Cómo participar en los foros, de forma académica?">
+            <span class="icono">💬</span>
+            <span style="font-size:1.2rem">Participación en foros</span>
+        </a>
+        <a class="boton-cuadrado" href="caso.html" target="_self" aria-label="Abrir ¿Cómo analizar un caso?">
+            <span class="icono">🔍</span>
+            <span style="font-size:1.2rem">Analizar un caso</span>
+        </a>
+        <a class="boton-cuadrado" href="ensayo.html" target="_self" aria-label="Abrir ¿Cómo escribo un ensayo argumentativo?">
+            <span class="icono">✍️</span>
+            <span style="font-size:1.2rem">Ensayo argumentativo</span>
+        </a>
+        <a class="boton-cuadrado" href="apa.html" target="_self" aria-label="Abrir ¿Cómo citar en normas APA?">
+            <span class="icono">📚</span>
+            <span style="font-size:1.2rem">Normas APA</span>
+        </a>
+        <a class="boton-cuadrado" href="workspace.html" target="_self" aria-label="Abrir ¿Cómo trabajar colaborativamente en Google Workspace de mi cuenta @uniacc.edu?">
+            <span class="icono">🤝</span>
+            <span style="font-size:1.2rem">Trabajo colaborativo</span>
+        </a>
+        <a class="boton-cuadrado" href="tasks.html" target="_self" aria-label="Abrir Organiza tu equipo de trabajo con Google Tasks">
+            <span class="icono">✅</span>
+            <span style="font-size:1.2rem">Google Tasks</span>
+        </a>
+        <a class="boton-cuadrado" href="genero.html" target="_self" aria-label="Abrir Protocolo de género y convivencia: nuestro compromiso contigo">
+            <span class="icono">⚖️</span>
+            <span style="font-size:1.2rem">Protocolo de género</span>
+        </a>
+        <a class="boton-cuadrado" href="inclusion.html" target="_self" aria-label="Abrir Comunicar sin sesgos, crear inclusión">
+            <span class="icono">🌍</span>
+            <span style="font-size:1.2rem">Comunicación inclusiva</span>
+        </a>
+        <a class="boton-cuadrado" href="ayuda.html" target="_self" aria-label="Abrir Portal de ayuda a estudiantes">
+            <span class="icono">🆘</span>
+            <span style="font-size:1.2rem">Portal de ayuda</span>
+        </a>
+        <span class="boton-cuadrado placeholder" aria-hidden="true"></span>
+        <span class="boton-cuadrado placeholder" aria-hidden="true"></span>
     </div>
 </div>
+</body>
+</html>
