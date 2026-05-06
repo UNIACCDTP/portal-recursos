@@ -6,69 +6,209 @@
 <title>Formatos, tutoriales y recursos</title>
 
 <style>
-    body { margin: 0; padding: 24px; font-family: Arial, sans-serif; color: #305F7B; background: #ffffff; box-sizing: border-box; }
+    body {
+        margin: 0;
+        padding: 24px;
+        font-family: Arial, sans-serif;
+        color: #305F7B;
+        background: #ffffff;
+        box-sizing: border-box;
+    }
+
     * { box-sizing: border-box; }
-    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
-    .title-box { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 8px; border: 1px solid #7AB2D4; background: #B5D9EB; color: #305F7B; font-family: 'Montserrat', Arial, sans-serif; font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem 0; }
-    .intro { font-size: 1.33rem; font-weight: 400; font-family: 'Montserrat', Arial, sans-serif; color: #305F7B; }
-    .grid-botones { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin: 20px 0; }
-    .boton-cuadrado { aspect-ratio: 1 / 1; width: 100%; min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; border-radius: 14px; background: #4D98C5; color: #ffffff !important; font-family: 'Montserrat', Arial, sans-serif; font-size: 1rem; font-weight: 700; line-height: 1.25; text-align: center; text-decoration: none; border: 1px solid #3B82AA; box-shadow: 0 4px 10px rgba(48, 95, 123, 0.18); transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; }
-    .boton-cuadrado:hover, .boton-cuadrado:focus { background: #305F7B; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(48, 95, 123, 0.25); outline: none; }
-    .icono { display: block; font-size: 2.4rem; line-height: 1; }
-    .placeholder { visibility: hidden; pointer-events: none; }
-    @media (max-width: 900px) { .grid-botones { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-    @media (max-width: 640px) { .grid-botones { grid-template-columns: repeat(2, minmax(0, 1fr)); } body { padding: 16px; } }
+
+    .wrap {
+        width: 100%;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+
+    .title-box {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border-radius: 8px;
+        border: 1px solid #7AB2D4;
+        background: #B5D9EB;
+        color: #305F7B;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+    }
+
+    .intro {
+        font-size: 1.33rem;
+        font-weight: 400;
+        font-family: 'Montserrat', Arial, sans-serif;
+        color: #305F7B;
+    }
+
+    .grid-botones {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 16px;
+        margin: 20px 0;
+    }
+
+    /* BOTONES 15% MÁS PEQUEÑOS */
+    .boton-cuadrado {
+        aspect-ratio: 1 / 1;
+        width: 85%;
+        margin: 0 auto;
+        min-height: 128px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px;
+        border-radius: 14px;
+        background: #4D98C5;
+        color: #ffffff !important;
+        font-family: 'Montserrat', Arial, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: center;
+        text-decoration: none;
+        border: 1px solid #3B82AA;
+        box-shadow: 0 4px 10px rgba(48, 95, 123, 0.18);
+        transition: transform 0.2s ease,
+                    background 0.2s ease,
+                    box-shadow 0.2s ease;
+    }
+
+    .boton-cuadrado:hover,
+    .boton-cuadrado:focus {
+        background: #305F7B;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(48, 95, 123, 0.25);
+        outline: none;
+    }
+
+    .icono {
+        display: block;
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .texto-boton {
+        font-size: 1rem;
+    }
+
+    .placeholder {
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    @media (max-width: 900px) {
+        .grid-botones {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 640px) {
+        .grid-botones {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        body {
+            padding: 16px;
+        }
+
+        .boton-cuadrado {
+            width: 100%;
+        }
+    }
 </style>
 
 </head>
 <body>
+
 <div class="wrap">
+
     <h1 class="title-box">Formatos, tutoriales y recursos</h1>
+
     <p class="intro">Selecciona un recurso para acceder:</p>
+
     <div class="grid-botones">
-        <a class="boton-cuadrado" href="formatos.html" target="_self" aria-label="Abrir Utiliza estos formatos para entregar tu respuesta a las evaluaciones">
+
+        <a class="boton-cuadrado" href="formatos.html" target="_self"
+           aria-label="Abrir Utiliza estos formatos para entregar tu respuesta a las evaluaciones">
             <span class="icono">📄</span>
-            <span style="font-size:1.2rem">Utiliza estos formatos para entregar tu respuesta a las evaluaciones</span>
+            <span class="texto-boton">Formatos de evaluación</span>
         </a>
-        <a class="boton-cuadrado" href="foros.html" target="_self" aria-label="Abrir ¿Cómo participar en los foros, de forma académica?">
+
+        <a class="boton-cuadrado" href="foros.html" target="_self"
+           aria-label="Abrir ¿Cómo participar en los foros, de forma académica?">
             <span class="icono">💬</span>
-            <span style="font-size:1.2rem">¿Cómo participar en los foros, de forma académica?</span>
+            <span class="texto-boton">Participación en foros</span>
         </a>
-        <a class="boton-cuadrado" href="caso.html" target="_self" aria-label="Abrir ¿Cómo analizar un caso?">
+
+        <a class="boton-cuadrado" href="caso.html" target="_self"
+           aria-label="Abrir ¿Cómo analizar un caso?">
             <span class="icono">🔍</span>
-            <span style="font-size:1.2rem">¿Cómo analizar un caso?</span>
+            <span class="texto-boton">Analizar un caso</span>
         </a>
-        <a class="boton-cuadrado" href="ensayo.html" target="_self" aria-label="Abrir ¿Cómo escribo un ensayo argumentativo?">
+
+        <a class="boton-cuadrado" href="ensayo.html" target="_self"
+           aria-label="Abrir ¿Cómo escribo un ensayo argumentativo?">
             <span class="icono">✍️</span>
-            <span style="font-size:1.2rem">¿Cómo escribo un ensayo argumentativo?</span>
+            <span class="texto-boton">Ensayo argumentativo</span>
         </a>
-        <a class="boton-cuadrado" href="apa.html" target="_self" aria-label="Abrir ¿Cómo citar en normas APA?">
+
+        <a class="boton-cuadrado" href="apa.html" target="_self"
+           aria-label="Abrir ¿Cómo citar en normas APA?">
             <span class="icono">📚</span>
-            <span style="font-size:1.2rem">¿Cómo citar en normas APA?</span>
+            <span class="texto-boton">Normas APA</span>
         </a>
-        <a class="boton-cuadrado" href="workspace.html" target="_self" aria-label="Abrir ¿Cómo trabajar colaborativamente en Google Workspace de mi cuenta @uniacc.edu?">
+
+        <a class="boton-cuadrado" href="workspace.html" target="_self"
+           aria-label="Abrir ¿Cómo trabajar colaborativamente en Google Workspace de mi cuenta @uniacc.edu?">
             <span class="icono">🤝</span>
-            <span style="font-size:1.2rem">¿Cómo trabajar colaborativamente en Google Workspace de mi cuenta @uniacc.edu?</span>
+            <span class="texto-boton">Trabajo colaborativo</span>
         </a>
-        <a class="boton-cuadrado" href="tasks.html" target="_self" aria-label="Abrir Organiza tu equipo de trabajo con Google Tasks">
+
+        <a class="boton-cuadrado" href="tasks.html" target="_self"
+           aria-label="Abrir Organiza tu equipo de trabajo con Google Tasks">
             <span class="icono">✅</span>
-            <span style="font-size:1.2rem">Organiza tu equipo de trabajo con Google Tasks</span>
+            <span class="texto-boton">Google Tasks</span>
         </a>
-        <a class="boton-cuadrado" href="genero.html" target="_self" aria-label="Abrir Protocolo de género y convivencia: nuestro compromiso contigo">
+
+        <a class="boton-cuadrado" href="genero.html" target="_self"
+           aria-label="Abrir Protocolo de género y convivencia: nuestro compromiso contigo">
             <span class="icono">⚖️</span>
-            <span style="font-size:1.2rem">Protocolo de género y convivencia: nuestro compromiso contigo</span>
+            <span class="texto-boton">Protocolo de género</span>
         </a>
-        <a class="boton-cuadrado" href="inclusion.html" target="_self" aria-label="Abrir Comunicar sin sesgos, crear inclusión">
+
+        <a class="boton-cuadrado" href="inclusion.html" target="_self"
+           aria-label="Abrir Comunicar sin sesgos, crear inclusión">
             <span class="icono">🌍</span>
-            <span style="font-size:1.2rem"Comunicar sin sesgos, crear inclusión</span>
+            <span class="texto-boton">Comunicación inclusiva</span>
         </a>
-        <a class="boton-cuadrado" href="ayuda.html" target="_self" aria-label="Abrir Portal de ayuda a estudiantes">
+
+        <a class="boton-cuadrado" href="ayuda.html" target="_self"
+           aria-label="Abrir Portal de ayuda a estudiantes">
             <span class="icono">🆘</span>
-            <span style="font-size:1.2rem">Portal de ayuda a estudiantes</span>
+            <span class="texto-boton">Portal de ayuda</span>
         </a>
+
+        <!-- NUEVO BOTÓN -->
+        <a class="boton-cuadrado" href="comunicacion.html" target="_self"
+           aria-label="Abrir Comunicándonos ¿cómo resolver tus dudas en UNIACC?">
+            <span class="icono">📞</span>
+            <span class="texto-boton">
+                Comunicándonos ¿cómo resolver tus dudas en UNIACC?
+            </span>
+        </a>
+
         <span class="boton-cuadrado placeholder" aria-hidden="true"></span>
-        <span class="boton-cuadrado placeholder" aria-hidden="true"></span>
+
     </div>
+
 </div>
+
 </body>
 </html>
