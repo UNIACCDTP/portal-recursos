@@ -1,242 +1,124 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formatos, tutoriales y recursos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatos, tutoriales y recursos</title>
 
-<style>
-    body {
-        margin: 0;
-        padding: 24px;
-        font-family: Arial, sans-serif;
-        color: #305F7B;
-        background: #ffffff;
-        box-sizing: border-box;
-    }
-
-    * { box-sizing: border-box; }
-
-    .wrap {
-        width: 100%;
-        max-width: 1080px;
-        margin: 0 auto;
-    }
-
-    .title-box {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 8px 12px;
-        border-radius: 8px;
-        border: 1px solid #7AB2D4;
-        background: #B5D9EB;
-        color: #305F7B;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin: 0 0 1rem 0;
-    }
-
-    .intro {
-        font-size: 1.33rem;
-        font-weight: 400;
-        font-family: 'Montserrat', Arial, sans-serif;
-        color: #305F7B;
-    }
-
-    .grid-botones {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 16px;
-        margin: 20px 0;
-    }
-
-    /* BOTONES 15% MÁS PEQUEÑOS */
-    .boton-cuadrado {
-        aspect-ratio: 1 / 1;
-        width: 85%;
-        margin: 0 auto;
-        min-height: 128px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 8px;
-        padding: 12px;
-        border-radius: 14px;
-        background: #4D98C5;
-        color: #ffffff !important;
-        font-family: 'Montserrat', Arial, sans-serif;
-        font-size: 0.82rem;
-        font-weight: 700;
-        line-height: 1.15;
-        text-align: center;
-        text-decoration: none;
-        border: 1px solid #3B82AA;
-        box-shadow: 0 4px 10px rgba(48, 95, 123, 0.18);
-        transition: transform 0.2s ease,
-                    background 0.2s ease,
-                    box-shadow 0.2s ease;
-        word-break: break-word;
-    }
-
-    .boton-cuadrado:hover,
-    .boton-cuadrado:focus {
-        background: #305F7B;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 14px rgba(48, 95, 123, 0.25);
-        outline: none;
-    }
-
-    .icono {
-        display: block;
-        font-size: 1.8rem;
-        line-height: 1;
-    }
-
-    .texto-boton {
-        font-size: 0.92rem;
-    }
-
-    .placeholder {
-        visibility: hidden;
-        pointer-events: none;
-    }
-
-    @media (max-width: 900px) {
-        .grid-botones {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-    }
-
-    @media (max-width: 640px) {
-        .grid-botones {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        body {
-            padding: 16px;
-        }
-
-        .boton-cuadrado {
-            width: 100%;
-        }
-    }
-</style>
-
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-<div class="wrap">
+<div class="app-layout">
 
-    <h1 class="title-box">Formatos, tutoriales y recursos</h1>
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-logo">U</div>
+            <div>
+                <h2>UNIACC</h2>
+                <p>Recursos estudiantes</p>
+            </div>
+        </div>
 
-    <p class="intro">Selecciona un recurso para acceder:</p>
+        <nav class="menu-lateral" aria-label="Categorías de recursos">
+            <button class="categoria-btn activo" data-filtro="todos">Todo el repositorio</button>
+            <button class="categoria-btn" data-filtro="academicos">01 Académicos</button>
+            <button class="categoria-btn" data-filtro="colaboracion">02 Trabajo colaborativo</button>
+            <button class="categoria-btn" data-filtro="convivencia">03 Convivencia e inclusión</button>
+            <button class="categoria-btn" data-filtro="apoyo">04 Apoyo estudiantil</button>
+        </nav>
+    </aside>
 
-    <div class="grid-botones">
+    <main class="contenido">
 
-        <a class="boton-cuadrado" href="formatos.html" target="_self"
-           aria-label="Abrir Utiliza estos formatos para entregar tu respuesta a las evaluaciones">
-            <span class="icono">📄</span>
-            <span class="texto-boton">
-                Formatos para entrega de trabajos
-            </span>
-        </a>
+        <section class="hero">
+            <span class="etiqueta">Repositorio de recursos</span>
+            <h1>Formatos, tutoriales y recursos</h1>
+            <p>Selecciona una categoría del menú lateral para visualizar los recursos disponibles.</p>
+        </section>
 
-        <a class="boton-cuadrado" href="foros.html" target="_self"
-           aria-label="Abrir ¿Cómo participar en los foros, de forma académica?">
-            <span class="icono">💬</span>
-            <span class="texto-boton">
-                Participar en foros, de forma académica
-            </span>
-        </a>
+        <section class="grid-botones">
 
-        <a class="boton-cuadrado" href="caso.html" target="_self"
-           aria-label="Abrir ¿Cómo analizar un caso?">
-            <span class="icono">🔍</span>
-            <span class="texto-boton">
-                Cómo analizar un caso
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="academicos" href="formatos.html">
+                <span class="tipo">Documento</span>
+                <span class="icono">📄</span>
+                <span class="texto-boton">Formatos para entrega de trabajos</span>
+            </a>
 
-        <a class="boton-cuadrado" href="ensayo.html" target="_self"
-           aria-label="Abrir ¿Cómo escribo un ensayo argumentativo?">
-            <span class="icono">✍️</span>
-            <span class="texto-boton">
-                Cómo escribir un ensayo argumentativo
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="academicos" href="foros.html">
+                <span class="tipo">Tutorial</span>
+                <span class="icono">💬</span>
+                <span class="texto-boton">Participar en foros, de forma académica</span>
+            </a>
 
-        <a class="boton-cuadrado" href="apa.html" target="_self"
-           aria-label="Abrir ¿Cómo citar en normas APA?">
-            <span class="icono">📚</span>
-            <span class="texto-boton">
-                Cómo citar en normas APA
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="academicos" href="caso.html">
+                <span class="tipo">Guía</span>
+                <span class="icono">🔍</span>
+                <span class="texto-boton">Cómo analizar un caso</span>
+            </a>
 
-        <a class="boton-cuadrado" href="workspace.html" target="_self"
-           aria-label="Abrir ¿Cómo trabajar colaborativamente en Google Workspace de mi cuenta @uniacc.edu?">
-            <span class="icono">🤝</span>
-            <span class="texto-boton">
-                Cómo trabajar colaborativamente Google Workspace
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="academicos" href="ensayo.html">
+                <span class="tipo">Guía</span>
+                <span class="icono">✍️</span>
+                <span class="texto-boton">Cómo escribir un ensayo argumentativo</span>
+            </a>
 
-        <a class="boton-cuadrado" href="tasks.html" target="_self"
-           aria-label="Abrir Organiza tu equipo de trabajo con Google Tasks">
-            <span class="icono">✅</span>
-            <span class="texto-boton">
-                Organiza tu equipo de trabajo con Google Tasks
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="academicos" href="apa.html">
+                <span class="tipo">Normativa</span>
+                <span class="icono">📚</span>
+                <span class="texto-boton">Cómo citar en normas APA</span>
+            </a>
 
-        <a class="boton-cuadrado" href="genero.html" target="_self"
-           aria-label="Abrir Protocolo de género y convivencia: nuestro compromiso contigo">
-            <span class="icono">⚖️</span>
-            <span class="texto-boton">
-                Protocolo de género y convivencia
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="colaboracion" href="workspace.html">
+                <span class="tipo">Google Workspace</span>
+                <span class="icono">🤝</span>
+                <span class="texto-boton">Cómo trabajar colaborativamente Google Workspace</span>
+            </a>
 
-        <a class="boton-cuadrado" href="inclusion.html" target="_self"
-           aria-label="Abrir Comunicar sin sesgos, crear inclusión">
-            <span class="icono">🌍</span>
-            <span class="texto-boton">
-                Comunicar sin sesgos, crear inclusión
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="colaboracion" href="tasks.html">
+                <span class="tipo">Organización</span>
+                <span class="icono">✅</span>
+                <span class="texto-boton">Organiza tu equipo de trabajo con Google Tasks</span>
+            </a>
 
-        <a class="boton-cuadrado" href="ayuda.html" target="_self"
-           aria-label="Abrir Portal de ayuda a estudiantes">
-            <span class="icono">🛟</span>
-            <span class="texto-boton">
-                Portal de ayuda a estudiantes
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="convivencia" href="genero.html">
+                <span class="tipo">Protocolo</span>
+                <span class="icono">⚖️</span>
+                <span class="texto-boton">Protocolo de género y convivencia</span>
+            </a>
 
-        <a class="boton-cuadrado" href="comunicacion.html" target="_self"
-           aria-label="Abrir Comunicándonos ¿cómo resolver tus dudas en UNIACC?">
-            <span class="icono">📞</span>
-            <span class="texto-boton">
-Cómo resolver tus dudas
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="convivencia" href="inclusion.html">
+                <span class="tipo">Inclusión</span>
+                <span class="icono">🌍</span>
+                <span class="texto-boton">Comunicar sin sesgos, crear inclusión</span>
+            </a>
 
-        <a class="boton-cuadrado" href="capsi.html" target="_self"
-           aria-label="Abrir Centro de atención psicológica">
-            <span class="icono">🆘</span>
-            <span class="texto-boton">
-                Centro de atención psicológica
-            </span>
-        </a>
+            <a class="boton-cuadrado" data-categoria="apoyo" href="ayuda.html">
+                <span class="tipo">Soporte</span>
+                <span class="icono">🛟</span>
+                <span class="texto-boton">Portal de ayuda a estudiantes</span>
+            </a>
 
-        <span class="boton-cuadrado placeholder" aria-hidden="true"></span>
+            <a class="boton-cuadrado" data-categoria="apoyo" href="comunicacion.html">
+                <span class="tipo">Orientación</span>
+                <span class="icono">📞</span>
+                <span class="texto-boton">Cómo resolver tus dudas</span>
+            </a>
 
-    </div>
+            <a class="boton-cuadrado" data-categoria="apoyo" href="capsi.html">
+                <span class="tipo">Bienestar</span>
+                <span class="icono">🧠</span>
+                <span class="texto-boton">Centro de atención psicológica</span>
+            </a>
+
+        </section>
+
+    </main>
 
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
