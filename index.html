@@ -3,122 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios, tutoriales y recursos</title>
-
+    <title>UNIACC - Repositorio de Recursos para Estudiantes</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<div class="app-layout">
+<div id="loader-global" class="loader-overlay oculto-estricto">
+    <div class="loader-box">
+        <div class="spinner"></div>
+        <p>Cargando recurso...</p>
+    </div>
+</div>
 
-    <aside class="sidebar">
+<div class="app-layout" id="app-container">
+    
+    <button id="mobile-menu-toggle" class="mobile-toggle">☰ Menú de categorías</button>
+
+    <aside class="sidebar" id="main-sidebar">
         <div class="brand">
-            <div class="brand-logo">U</div>
-            <div>
-                <h2>UNIACC</h2>
+            <div class="brand-content">
+                <img src="uniacc_logo.png" alt="Logo UNIACC" class="logo-img">
                 <p>Recursos estudiantes</p>
             </div>
         </div>
 
         <nav class="menu-lateral" aria-label="Categorías de recursos">
-            <button class="categoria-btn activo" data-filtro="todos">Todo el repositorio</button>
-            <button class="categoria-btn" data-filtro="academicos">01 Académicos</button>
-            <button class="categoria-btn" data-filtro="colaboracion">02 Trabajo colaborativo</button>
-            <button class="categoria-btn" data-filtro="convivencia">03 Convivencia e inclusión</button>
-            <button class="categoria-btn" data-filtro="apoyo">04 Apoyo estudiantil</button>
+            <button class="categoria-btn activo" data-filtro="todos">
+                <span class="btn-icon">📁</span> <span class="btn-text">Todo el repositorio</span>
+            </button>
+            <button class="categoria-btn" data-filtro="academicos">
+                <span class="btn-icon">🎓</span> <span class="btn-text">01 Académicos</span>
+            </button>
+            <button class="categoria-btn" data-filtro="colaboracion">
+                <span class="btn-icon">🤝</span> <span class="btn-text">02 Trabajo colaborativo</span>
+            </button>
+            <button class="categoria-btn" data-filtro="convivencia">
+                <span class="btn-icon">👥</span> <span class="btn-text">03 Convivencia e inclusión</span>
+            </button>
+            <button class="categoria-btn" data-filtro="apoyo">
+                <span class="btn-icon">🛟</span> <span class="btn-text">04 Apoyo estudiantil</span>
+            </button>
         </nav>
     </aside>
 
     <main class="contenido">
+        
+        <div id="vista-grid">
+            <section class="hero">
+                <span class="etiqueta">Repositorio de recursos</span>
+                <h1>Servicios, tutoriales y recursos</h1>
+                <p>Selecciona una categoría del menú lateral para visualizar los recursos disponibles.</p>
+            </section>
 
-        <section class="hero">
-            <span class="etiqueta">Repositorio de recursos</span>
-            <h1>Servicios, tutoriales y recursos</h1>
-            <p>Selecciona una categoría del menú lateral para visualizar los recursos disponibles.</p>
-        </section>
+            <section class="grid-botones">
+                <button class="boton-cuadrado" data-categoria="academicos" data-target="formatos">
+                    <span class="tipo">Documento</span>
+                    <span class="icono">📄</span>
+                    <span class="texto-boton">Formatos para entrega de trabajos</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="academicos" data-target="foros">
+                    <span class="tipo">Tutorial</span>
+                    <span class="icono">💬</span>
+                    <span class="texto-boton">Participar en foros, de forma académica</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="academicos" data-target="caso">
+                    <span class="tipo">Guía</span>
+                    <span class="icono">🔍</span>
+                    <span class="texto-boton">Cómo analizar un caso</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="academicos" data-target="ensayo">
+                    <span class="tipo">Guía</span>
+                    <span class="icono">✍️</span>
+                    <span class="texto-boton">Cómo escribir un ensayo argumentativo</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="academicos" data-target="apa">
+                    <span class="tipo">Normativa</span>
+                    <span class="icono">📚</span>
+                    <span class="texto-boton">Cómo citar en normas APA</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="colaboracion" data-target="workspace">
+                    <span class="tipo">Google Workspace</span>
+                    <span class="icono">🤝</span>
+                    <span class="texto-boton">Cómo trabajar colaborativamente Google Workspace</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="colaboracion" data-target="tasks">
+                    <span class="tipo">Organización</span>
+                    <span class="icono">✅</span>
+                    <span class="texto-boton">Organiza tu equipo de trabajo con Google Tasks</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="convivencia" data-target="genero">
+                    <span class="tipo">Protocolo</span>
+                    <span class="icono">⚖️</span>
+                    <span class="texto-boton">Protocolo de género y convivencia</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="convivencia" data-target="inclusion">
+                    <span class="tipo">Inclusión</span>
+                    <span class="icono">🌍</span>
+                    <span class="texto-boton">Comunicar sin sesgos, crear inclusión</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="apoyo" data-target="ayuda">
+                    <span class="tipo">Soporte</span>
+                    <span class="icono">🛟</span>
+                    <span class="texto-boton">Portal de ayuda a estudiantes</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="apoyo" data-target="comunicacion">
+                    <span class="tipo">Orientación</span>
+                    <span class="icono">📞</span>
+                    <span class="texto-boton">Cómo resolver tus dudas</span>
+                </button>
+                <button class="boton-cuadrado" data-categoria="apoyo" data-target="capsi">
+                    <span class="tipo">Bienestar</span>
+                    <span class="icono">🧠</span>
+                    <span class="texto-boton">Centro de atención psicológica</span>
+                </button>
+            </section>
+        </div>
 
-        <section class="grid-botones">
+        <div id="vista-detalle" class="oculto-estricto">
+            <div class="header-detalle-fijo">
+                <button id="btn-volver" class="btn-volver">← Volver al repositorio</button>
+                <button id="btn-compartir" class="btn-compartir">🔗 Copiar enlace directo</button>
+            </div>
+            
+            <div id="contenedor-dinamico">
+                
+                <div id="formatos" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>📄</span> Formatos de evaluación</h2>
+                    <div class="rich-text">
+                        <p>Accede a los siguientes enlaces. Puedes:</p>
+                        <ul>
+                            <li>Hacer una copia hacia tu cuenta @uniacc.edu:
+                                <ul>
+                                    <li>Quedará alojado en tu Google Drive y podrás trabajar sobre este archivo de forma online.</li>
+                                    <li>Podrás entregarlo desde el mismo Google Drive o descargarlo, en formato PDF, para subirlo a la evaluación correspondiente.</li>
+                                </ul>
+                            </li>
+                            <li>Escoger el formato que más te guste.</li>
+                        </ul>
+                        <h3>Formato escrito vertical</h3>
+                        <p><a href="https://docs.google.com/document/d/1PrN3ScaTwC_1zqYI_Dj3rd0GrYDq7LpjD-rWoKTzr9Q/edit?usp=sharing" target="_blank">Opción 1</a> | <a href="https://docs.google.com/document/d/1Vb-1XMqPxbEmHdKyQAPaTDY5I0Gu5KHzX2JsOzsHnzw/edit?usp=sharing" target="_blank">Opción 2</a> | <a href="https://docs.google.com/document/d/18yt5Dit2C5Ny92opYVJaJYDGKNV0N9qK23HA0BJVj_o/edit?usp=sharing" target="_blank">Opción 3</a></p>
+                        <h3>Formato presentación</h3>
+                        <p><a href="https://docs.google.com/presentation/d/1rhYfWVmNXQe4Z2kv27mE9TF9c5zD4U5J58bb79yTnBs/edit?usp=sharing" target="_blank">Opción 1</a> | <a href="https://docs.google.com/presentation/d/1_3PsiSosz5odNTRaHWtoMHT6M_y2TyTZSW7Q9jj5RmM/edit?usp=sharing" target="_blank">Opción 2</a> | <a href="https://docs.google.com/presentation/d/1svfcbNQU_5Y-0h3XiTYl5RHQEYsrINhUBpa6G7uE7ks/edit?usp=sharing" target="_blank">Opción 3</a></p>
+                        <h3>Formato escrito horizontal</h3>
+                        <p><a href="https://docs.google.com/document/d/1yUDe7NuXu0wZpn4KaAdAJs7jo7xuBuIezGE9XHw3v6M/edit?usp=sharing" target="_blank">Opción 1</a> | <a href="https://docs.google.com/document/d/1cIm3rRt0AKv-m8nKO_G-iOpHYDqKY-HbbIOwsH4FFbk/edit?usp=sharing" target="_blank">Opción 2</a> | <a href="https://docs.google.com/document/d/1lG__cZGN9yoEb2DB6YLymVww5wc7OA5s8ZguGBc9ezs/edit?usp=sharing" target="_blank">Opción 3</a></p>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="academicos" href="formatos.html">
-                <span class="tipo">Documento</span>
-                <span class="icono">📄</span>
-                <span class="texto-boton">Formatos para entrega de trabajos</span>
-            </a>
+                <div id="foros" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>💬</span> Participación en foros</h2>
+                    <div class="iframe-responsive">
+                        <iframe data-src="https://view.genially.com/699c9173749d48a23926da37"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="academicos" href="foros.html">
-                <span class="tipo">Tutorial</span>
-                <span class="icono">💬</span>
-                <span class="texto-boton">Participar en foros, de forma académica</span>
-            </a>
+                <div id="caso" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>🔍</span> Analizar un caso</h2>
+                    <div class="iframe-responsive">
+                        <iframe data-src="https://davdauniacc.github.io/analisiscasos/"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="academicos" href="caso.html">
-                <span class="tipo">Guía</span>
-                <span class="icono">🔍</span>
-                <span class="texto-boton">Cómo analizar un caso</span>
-            </a>
+                <div id="ensayo" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>✍️</span> Ensayo argumentativo</h2>
+                    <iframe data-src="https://app.lumi.education/api/v1/run/qHY3aS/embed" style="width: 100%; height: 4760px; border: none;"></iframe>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="academicos" href="ensayo.html">
-                <span class="tipo">Guía</span>
-                <span class="icono">✍️</span>
-                <span class="texto-boton">Cómo escribir un ensayo argumentativo</span>
-            </a>
+                <div id="apa" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>📚</span> Normas APA</h2>
+                    <div class="iframe-responsive" style="padding-bottom: 800px;">
+                        <iframe data-src="https://www.uniacc.cl/biblioteca/normas-apa/"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="academicos" href="apa.html">
-                <span class="tipo">Normativa</span>
-                <span class="icono">📚</span>
-                <span class="texto-boton">Cómo citar en normas APA</span>
-            </a>
+                <div id="workspace" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>🤝</span> Trabajo colaborativo</h2>
+                    <div class="rich-text">
+                        <div class="caja-destacada">Trabajo colaborativo en Google Workspace</div>
+                        <p>Para trabajar colaborativamente en documento final y archivos asociados dentro del espacio seguro de Google Workspace asociado a tu cuenta @uniacc.edu, recuerda que debes:</p>
+                        <ul>
+                            <li>Leer las indicaciones para el trabajo colaborativo.</li>
+                            <li>Ver todos los videotutoriales que se encuentran en el Portal de ayuda al estudiante.</li>
+                            <li>Seguir estos pasos:</li>
+                        </ul>
+                        <p>1. <strong>¡Adiós Whatsapp! - Google Chat</strong></p>
+                        <div class="iframe-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/mCg_urlyXKc"></iframe></div>
+                        <p>2. <strong>¡No crees carpetas! - Google Drive</strong></p>
+                        <div class="iframe-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/64c-GjX8Wow"></iframe></div>
+                        <p>3. <strong>El fin del monstruo de Frankenstein - Google Docs</strong></p>
+                        <div class="iframe-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/BO3QDRzLf5c"></iframe></div>
+                        <p>4. <strong>¿Horarios imposibles? - Google Meet y Google Vids</strong></p>
+                        <div class="iframe-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/_7kdD3OuYu4"></iframe></div>
+                        <p>5. <strong>La entrega - Google Docs - Aula e-campus</strong></p>
+                        <div class="iframe-responsive"><iframe data-src="https://www.youtube-nocookie.com/embed/p1l-5wZeQ_g"></iframe></div>
+                        <p style="font-size: 1rem; font-style: italic;">Cualquier ayuda adicional, solicítala a tu docente.</p>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="colaboracion" href="workspace.html">
-                <span class="tipo">Google Workspace</span>
-                <span class="icono">🤝</span>
-                <span class="texto-boton">Cómo trabajar colaborativamente Google Workspace</span>
-            </a>
+                <div id="tasks" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>✅</span> Google Tasks</h2>
+                    <div class="iframe-responsive">
+                        <iframe data-src="https://view.genially.com/69b2dfd1508d939cda209e99"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="colaboracion" href="tasks.html">
-                <span class="tipo">Organización</span>
-                <span class="icono">✅</span>
-                <span class="texto-boton">Organiza tu equipo de trabajo con Google Tasks</span>
-            </a>
+                <div id="genero" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>⚖️</span> Protocolo de género</h2>
+                    <div class="iframe-responsive">
+                        <iframe data-src="https://www.youtube.com/embed/wYV_5DNJGfY?si=EsdPjIxQ_SOHWkvM?vq=hd108"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="convivencia" href="genero.html">
-                <span class="tipo">Protocolo</span>
-                <span class="icono">⚖️</span>
-                <span class="texto-boton">Protocolo de género y convivencia</span>
-            </a>
+                <div id="inclusion" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>🌍</span> Comunicación inclusiva</h2>
+                    <div class="iframe-responsive">
+                        <iframe data-src="https://view.genially.com/69a19699a8dd2f113b5a8d64"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="convivencia" href="inclusion.html">
-                <span class="tipo">Inclusión</span>
-                <span class="icono">🌍</span>
-                <span class="texto-boton">Comunicar sin sesgos, crear inclusión</span>
-            </a>
+                <div id="ayuda" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>🛟</span> Portal de ayuda</h2>
+                    <div class="iframe-responsive" style="padding-bottom: 700px;">
+                        <iframe data-src="https://ayudaestudiantes.uniacc.cl/"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="apoyo" href="ayuda.html">
-                <span class="tipo">Soporte</span>
-                <span class="icono">🛟</span>
-                <span class="texto-boton">Portal de ayuda a estudiantes</span>
-            </a>
+                <div id="comunicacion" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>📞</span> Cómo resolver dudas</h2>
+                    <div class="iframe-responsive" style="padding-bottom: 700px;">
+                        <iframe data-src="https://davdauniacc.github.io/comunicandonosuniacc/"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="apoyo" href="comunicacion.html">
-                <span class="tipo">Orientación</span>
-                <span class="icono">📞</span>
-                <span class="texto-boton">Cómo resolver tus dudas</span>
-            </a>
+                <div id="capsi" class="detalle-recurso">
+                    <h2 class="titulo-detalle"><span>🧠</span> CAPSI</h2>
+                    <div class="iframe-responsive" style="padding-bottom: 700px;">
+                        <iframe data-src="https://www.uniacc.cl/capsi/#faq-capsi"></iframe>
+                    </div>
+                </div>
 
-            <a class="boton-cuadrado" data-categoria="apoyo" href="capsi.html">
-                <span class="tipo">Bienestar</span>
-                <span class="icono">🧠</span>
-                <span class="texto-boton">Centro de atención psicológica</span>
-            </a>
-
-        </section>
-
+            </div>
+        </div>
     </main>
-
 </div>
 
+<script charset="UTF-8" src="https://app.Lumi.education/api/v1/h5p/core/js/h5p-resizer.js"></script>
 <script src="script.js"></script>
-
 </body>
 </html>
